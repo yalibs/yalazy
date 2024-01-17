@@ -46,4 +46,12 @@ public class Lazy<T> {
 		result = Optional.of(supplier.get());
 		return result.get();
 	}
+
+	/**
+	 * Set the value directly. This is useful if you want to manually overwrite the value with something new.
+	 * @param v The new value to overwrite with
+	 */
+	public void set(T v) {
+		result = Optional.of(v);
+	}
 }
